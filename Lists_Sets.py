@@ -16,6 +16,37 @@ nothealthyfood=[input('enter food') for i in range(10) ]
 
 print(nothealthyfood)
 
+
+
+#######remove elements in a list using a loop
+lista = ['angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke', 'angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke'
+         'angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke','angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke']
+
+newlist=[]
+
+for i in lista:
+    if lista.count('angel')!=0:
+        lista.remove('angel')
+    else:
+        newlist.append(i)
+
+print(newlist)
+
+#####OR
+lista = ['angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke', 'angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke'
+         'angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke','angel', 'mary', 'gaberiel', 'mark', 'matthew', 'luke']
+
+newlist=[]
+
+for i in lista:
+    if i =="angel":
+        lista.remove('angel')
+    else:
+        newlist.append(i)
+
+print(newlist)
+
+
 ############ Checking membership
 
 food=['rice','beans', 'fanta', 'chicken', 'grapes']
@@ -41,7 +72,7 @@ goodmusictaste=['sza','kendrick','summer','masego']
 
 badmusictaste =  [i for i in music if i not in goodmusictaste]
 print(badmusictaste)
-
+ 
 
 ###################  SETS ##################################
 
@@ -83,3 +114,38 @@ results = {
 
 # Print the final results
 print(results)
+
+
+
+
+################ SWAP AND REVERSE ALGORITHIMS##############
+
+
+data =['a', 'b', 'c', 'd', 'e','f', 'g', 'h']
+
+for index in range(len(data)//2):
+    data[index], data[-index-1]= data[-index-1],data[index]
+print(data)
+
+
+####### Using the Reverse Iterator #############
+
+data =['a', 'b', 'c', 'd', 'e','f', 'g', 'h']
+
+data_reversed=[]
+
+for i in reversed(data):
+    data_reversed.append(i)
+
+print(data)
+print(data_reversed)
+
+
+######## Reverse Using Slicing #############
+
+data =['a', 'b', 'c', 'd', 'e','f', 'g', 'h']
+
+data[:] = data[::-1]
+
+print(data)
+
