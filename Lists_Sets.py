@@ -149,3 +149,27 @@ data[:] = data[::-1]
 
 print(data)
 
+############## Sorting Algorithims ############# 
+
+data =[1,32,54,38,65,11,100,-1,3]
+
+data.sort()
+
+print(data)
+
+
+for i in range(len(data) //2):
+    data[i],data[-i-1] = data[-i-1],data[i]
+print(data)
+
+
+####### Another Variation ######
+
+print(sorted(data), reversed= True)
+
+print(data)
+
+
+######### SORTING 2D LIST ###########
+
+
